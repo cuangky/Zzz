@@ -94,13 +94,13 @@ jobs:
       uses: Mattraks/delete-workflow-runs@main
       continue-on-error: true
       with:
-        retain_days: 5
-        keep_minimum_runs: 1
+        retain_days: 1
+        keep_minimum_runs: 5
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@master
       with:
-        keep_latest: 100
+        keep_latest: 5
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN_kenzo }}
