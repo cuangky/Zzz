@@ -244,7 +244,12 @@ jobs:
               done
           fi
         echo "status=success" >> $GITHUB_ENV
-
+    - name: Make Packages Index
+      run:
+          cd openwrt
+          ls
+          make package/index V=s
+    
     - name: Check space usage
       run: df -hT
 
