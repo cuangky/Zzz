@@ -311,7 +311,7 @@ jobs:
             packages/*
             openwrt/error*.log
         name: ${{ env.NAME }}
-        tag_name: ${{ env.date }}_${{matrix.target}}
+        tag_name: ${{matrix.target}}
         body_path: release.txt
 
     - name: Upload packages for artifact
