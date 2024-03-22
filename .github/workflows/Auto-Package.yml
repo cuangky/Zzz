@@ -247,7 +247,7 @@ jobs:
     - name: Make Packages Index
       run:
           cd openwrt
-          ls
+          
           make package/index V=s
     
     - name: Check space usage
