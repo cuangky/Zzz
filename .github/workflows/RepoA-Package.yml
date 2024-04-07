@@ -12,8 +12,8 @@ on:
   # push: 
   #   branches:
   #     - master
-  schedule:
-    - cron: 0 4 * * *
+  #schedule:
+   # - cron: 0 4 * * *
   watch:
     types: started
   workflow_dispatch:
