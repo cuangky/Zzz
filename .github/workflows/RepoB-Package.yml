@@ -12,8 +12,8 @@ on:
   # push: 
   #   branches:
   #     - master
- # schedule:
-   # - cron: 0 6 * * *
+  schedule:
+    - cron: 10 3 * * *
   watch:
     types: started
   workflow_dispatch:
@@ -21,7 +21,7 @@ on:
       packages:
         description: 'Packages'
         required: false
-        default: ''
+        default: '.*'
 
 env:
   REPO_TOKEN: ${{ secrets.TOKEN_kenzo }}
